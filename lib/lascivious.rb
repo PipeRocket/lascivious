@@ -36,7 +36,7 @@ module Lascivious
         type_hash.map do |e|
           %Q{_kmq.push(['#{e.first.to_s}', '#{e.last.to_s}']);}
         end
-      end.flatten.join("\n")
+      end.flatten.join("\n").html_safe
     end
     return nil
   end
